@@ -14,7 +14,8 @@ private struct NavigationItemBackButtonTitleChanger: UIViewRepresentable {
     
     func updateUIView(_ uiView: UIViewType, context: Context) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.02) {
-            uiView.parentViewController?.navigationItem.backButtonTitle = title
+//            uiView.parentViewController?.navigationItem.backButtonTitle = title
+            uiView.parentViewController?.navigationController?.visibleViewController?.navigationItem.backButtonTitle = title
         }
     }
 }
